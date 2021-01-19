@@ -1,0 +1,60 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@model IEnumerable<IdentityUser>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>User List</h1>
+<table class="table table-striped" id="userTable">
+    <thead>
+        <tr>
+            <th>
+               User
+            </th>
+            <th>
+               Email
+            </th>
+            <th style="width:10%">
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>
+                    <div class="row">
+                        <div class="col-sm">
+                            <a>
+                                @user.UserName
+                            </a>
+                            <br>
+                            <small>
+                                @user.Id
+                            </small>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <a>
+                        @user.Email
+                    </a>
+                </td>
+                <td>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Action
+                        </button>
+                        <div class="dropdown-menu shadow animated--grow-in">
+                            <a style='margin-right:16px' asp-controller="UserRole" asp-action="Index" asp-route-userId="@user.Id" class="dropdown-item">
+                                <i class="fas fa-wrench"></i> Manage Roles
+                            </a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

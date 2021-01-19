@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PermissionManagement.MVC", "PermissionManagement.MVC\PermissionManagement.MVC.csproj", "{3447084E-E2F8-4CD6-9736-C3C6DAF59C28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3447084E-E2F8-4CD6-9736-C3C6DAF59C28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3447084E-E2F8-4CD6-9736-C3C6DAF59C28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3447084E-E2F8-4CD6-9736-C3C6DAF59C28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3447084E-E2F8-4CD6-9736-C3C6DAF59C28}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7BD76D80-9002-46AB-B430-8168A45F922C}
+	EndGlobalSection
+EndGlobal
