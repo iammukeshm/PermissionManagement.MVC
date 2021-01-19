@@ -1,6 +1,14 @@
 ﻿@using Microsoft.AspNetCore.Identity;
 @model IEnumerable<IdentityRole>
     <h1>Roles</h1>
+    <form method="post" asp-action="addrole" asp-controller="roles">
+        <div class="input-group">
+            <input name="roleName" class="form-control w-25">
+            <span class="input-group-btn">
+                <button class="btn btn-info">Add New Role</button>
+            </span>
+        </div>
+    </form>
     <table class="table table-striped" id="roleTable">
         <thead>
             <tr>
