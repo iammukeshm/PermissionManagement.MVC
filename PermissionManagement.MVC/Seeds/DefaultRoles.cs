@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using PermissionManagement.MVC.Constants;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace PermissionManagement.MVC.Seeds

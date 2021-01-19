@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace PermissionManagement.MVC.Constants
 {
@@ -17,6 +14,7 @@ namespace PermissionManagement.MVC.Constants
                 $"Permissions.{module}.Delete",
             };
         }
+
         public static class Products
         {
             public const string View = "Permissions.Products.View";

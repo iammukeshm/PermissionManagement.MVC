@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using PermissionManagement.MVC.Constants;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -30,6 +28,7 @@ namespace PermissionManagement.MVC.Seeds
                 }
             }
         }
+
         public static async Task SeedSuperAdminAsync(UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             //Seed Default User
@@ -53,11 +52,13 @@ namespace PermissionManagement.MVC.Seeds
                 await roleManager.SeedClaimsForSuperAdmin();
             }
         }
+
         private async static Task SeedClaimsForSuperAdmin(this RoleManager<IdentityRole> roleManager)
         {
             var adminRole = await roleManager.FindByNameAsync("SuperAdmin");
             await roleManager.AddPermissionClaim(adminRole, "Products");
         }
+
         public static async Task AddPermissionClaim(this RoleManager<IdentityRole> roleManager, IdentityRole role, string module)
         {
             var allClaims = await roleManager.GetClaimsAsync(role);
