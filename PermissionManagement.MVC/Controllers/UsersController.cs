@@ -10,15 +10,11 @@ namespace PermissionManagement.MVC.Controllers
     [Authorize]
     public class UsersController : Controller
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
-        private readonly RoleManager<IdentityRole> _roleManager;
 
-        public UsersController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, RoleManager<IdentityRole> roleManager)
+        public UsersController(UserManager<IdentityUser> userManager)
         {
             _userManager = userManager;
-            _signInManager = signInManager;
-            _roleManager = roleManager;
         }
 
         public async Task<IActionResult> Index()

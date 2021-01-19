@@ -1,6 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Identity;
 @model IEnumerable<IdentityRole>
     <h1>Roles</h1>
+    <br />
     <form method="post" asp-action="addrole" asp-controller="roles">
         <div class="input-group">
             <input name="roleName" class="form-control w-25">
@@ -41,11 +42,11 @@
                                 Action
                             </button>
                             <div class="dropdown-menu shadow animated--grow-in">
-                                <a onclick="jQueryModalGet('/admin/role/OnGetCreate?id=@role.Id','Edit Role')" class="dropdown-item">
+                                <a class="dropdown-item">
                                     <i class="fas fa-pencil-alt"></i> Edit
                                 </a>
-                                <form id="form_delete_@role.Id" asp-controller="Role" method="post" asp-action="OnPostDelete" asp-route-id="@role.Id" onsubmit="return jQueryModalDelete(this)" class="d-inline">
-                                    <a href="javascript:$('#form_delete_@role.Id').submit();" class="dropdown-item"><i class="fas fa-trash-alt"></i> Delete</a>
+                                <form class="d-inline">
+                                    <a class="dropdown-item"><i class="fas fa-trash-alt"></i> Delete</a>
                                 </form>
                                 @if (role.Name != "SuperAdmin")
                                 {
