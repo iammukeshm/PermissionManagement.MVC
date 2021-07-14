@@ -2,11 +2,11 @@
 
 namespace PermissionManagement.MVC.Controllers
 {
-    public class ProductController : Controller
+public class ProductController : Controller
+{
+    public IActionResult Index()
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        return View();
     }
+}
 }
